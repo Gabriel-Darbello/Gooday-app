@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import SplashPage from './src/pages/SplashPage';
+import Home from './src/pages/Home';
 
 export default function App() {
   return (
-    <SplashPage />
+    <Home />
   );
 }
 
