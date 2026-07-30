@@ -4,31 +4,35 @@ import React from 'react';
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Image
-        style={styles.image}
-        resizeMode="contain"
-        source={require('../assets/casual_dog.png')}
-      />
-      <Text style={styles.title}>Ótimo dia!</Text>
-      <Text style={styles.subtitle}>Como deseja acessar?</Text>
+      <View style={styles.topBar} />
 
-      <TouchableOpacity style={styles.accessButton}>
-        <View style={styles.iconContainer}>
-          <Image
-            source={require('../assets/Google.png')}
-            style={styles.googleLogo}
-            resizeMode="contain"
-          />
-        </View>
+      <View style={styles.content}>
+        <Image
+          style={styles.image}
+          resizeMode="contain"
+          source={require('../assets/casual_dog.png')}
+        />
+        <Text style={styles.title}>Ótimo dia!</Text>
+        <Text style={styles.subtitle}>Como deseja acessar?</Text>
 
-        <Text style={styles.textAccessButton}>Como deseja acessar?</Text>
+        <TouchableOpacity style={styles.accessButton}>
+          <View style={styles.iconContainer}>
+            <Image
+              source={require('../assets/Google.png')}
+              style={styles.googleLogo}
+              resizeMode="contain"
+            />
+          </View>
 
-        <View style={styles.iconSpacer} />
-      </TouchableOpacity>
+          <Text style={styles.textAccessButton}>Como deseja acessar?</Text>
 
-      <TouchableOpacity style={styles.optionsButton}>
-        <Text style={styles.textOptionsButton}>Outras opções</Text>
-      </TouchableOpacity>
+          <View style={styles.iconSpacer} />
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.optionsButton}>
+          <Text style={styles.textOptionsButton}>Outras opções</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -38,10 +42,7 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
     backgroundColor: '#f6f6f6',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   image: {
@@ -106,7 +107,19 @@ const styles = StyleSheet.create({
   textOptionsButton: {
     fontSize: 12,
   },
+
   iconSpacer: {
     width: 38,
+  },
+
+  topBar: {
+    height: 30,
+    backgroundColor: '#d8d8d8',
+  },
+
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
