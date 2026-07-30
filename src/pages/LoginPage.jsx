@@ -66,12 +66,12 @@ const LoginPage = () => {
         </View>
 
         <View style={styles.buttonsRow}>
-          <TouchableOpacity style={styles.cancelButton}>
-            <Text style={styles.cancelText}>Acessar</Text>
+          <TouchableOpacity style={styles.loginButton}>
+            <Text style={styles.loginText}>Acessar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginText}>Cadastrar</Text>
+          <TouchableOpacity style={styles.registerButton}>
+            <Text style={styles.registerText}>Cadastrar</Text>
           </TouchableOpacity>
         </View>
 
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
 
-  cancelButton: {
+  loginButton: {
     width: '48%',
     height: 45,
     backgroundColor: '#19C770',
@@ -169,13 +169,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  cancelText: {
+  loginText: {
     color: '#fff',
     fontSize: 14,
     fontWeight: '600',
   },
 
-  loginButton: {
+  registerButton: {
     width: '48%',
     height: 45,
     borderWidth: 1,
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  loginText: {
+  registerText: {
     color: '#000',
     fontSize: 14,
     fontWeight: '600',
