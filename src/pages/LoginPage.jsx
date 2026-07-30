@@ -21,7 +21,7 @@ const LoginPage = () => {
         <Text style={styles.subtitle}>com Email e senha</Text>
 
         <View style={styles.inputContainer}>
-          <Text style={styles.label}>Email</Text>
+          <Text style={styles.label}>E-mail</Text>
 
           <TextInput
             style={styles.input}
