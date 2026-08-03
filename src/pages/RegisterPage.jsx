@@ -1,11 +1,13 @@
 import React from 'react';
 import LoginOptions from '../components/LoginOptions';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import BackButton from '../components/BackButton';
 
 const RegisterPage = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topBar} />
+      <BackButton />
 
       <View style={styles.content}>
         <Text style={styles.title}>Cadastre-se</Text>

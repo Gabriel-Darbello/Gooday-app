@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
+  const navigator = useNavigation()
   return (
     <View style={styles.container}>
       <View style={styles.topBar} />
@@ -15,7 +17,7 @@ const Home = () => {
         <Text style={styles.title}>Ótimo dia!</Text>
         <Text style={styles.subtitle}>Como deseja acessar?</Text>
 
-        <TouchableOpacity style={styles.accessButton}>
+        <TouchableOpacity style={styles.accessButton} onPress={() => navigator.navigate('LoginPage')}>
           <View style={styles.iconContainer}>
             <Image
               source={require('../assets/Google.png')}

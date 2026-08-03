@@ -8,13 +8,17 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import LoginOptions from '../components/LoginOptions';
+import { useNavigation } from '@react-navigation/native';
+import BackButton from '../components/BackButton';
 
 const LoginPage = () => {
   const [remember, setRemember] = useState(false);
+  const navigator = useNavigation()
 
   return (
     <View style={styles.container}>
       <View style={styles.topBar} />
+      <BackButton />
 
       <View style={styles.content}>
         <Text style={styles.title}>Acesse</Text>
@@ -70,7 +74,7 @@ const LoginPage = () => {
             <Text style={styles.loginText}>Acessar</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.registerButton}>
+          <TouchableOpacity style={styles.registerButton} onPress={() => navigator.navigate('RegisterPage')}>
             <Text style={styles.registerText}>Cadastrar</Text>
           </TouchableOpacity>
         </View>

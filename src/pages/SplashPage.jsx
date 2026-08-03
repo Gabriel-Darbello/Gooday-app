@@ -1,16 +1,24 @@
 import { StyleSheet, Image, View } from 'react-native';
-import React from 'react';
+import { useNavigation } from '@react-navigation/native';
+import React, { useEffect } from 'react';
 
 const SplashPage = () => {
+  const navigator = useNavigation();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigator.replace('Home');
+    }, 3000);
+
+    return () => clearTimeout(timer);
+
+  }, []);
   return (
     <View style={styles.container}>
       <View style={styles.topBar} />
 
       <View style={styles.content}>
-        <Image
-          source={require('../assets/logotipo.png')}
-          resizeMode="contain"
-        />
+        <Image source={require('../assets/logotipo.png')} resizeMode="contain" />
       </View>
     </View>
   );
